@@ -1,22 +1,29 @@
-<html>
-    <header>
-        <title>Bienvenido a mi página</title>
-        <style href="style.css"/>
-        <script>
-              // Cambia la URL visualmente apenas carga la página
-              // El primer parámetro es el estado, el segundo el título (ignorado), el tercero es la URL
-              window.history.replaceState(null, null, "/rka/main");
-        </script>
-    </header>    
-    <body>
-        <div class="construction-bar construction-top"></div>
-        <div class="main-content">
-            <div class="container">
-                <h1>Ricardo Kraus</h1>
-                <img src="https://avatars.githubusercontent.com/u/109121634?v=2" alt="Ricardo Kraus">
-                <p>Bienvenido a mi página web, todavía está en construcción asi que de mientras, visita mi página de linkedin <a href="https://www.linkedin.com/in/ricardo-kraus/">aquí</a> o mi perfil de github <a href="https://github.com/Ricardokraus">aquí</a>.</p>
-            </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenido a mi página</title>
+    
+    <!-- Corregido: así se enlazan los estilos -->
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+      // Solo ejecutamos el cambio si NO estamos abriendo el archivo localmente
+      if (window.location.protocol !== 'file:') {
+          // Usar "main" en lugar de "/rka/main" es más seguro en GitHub Pages
+          window.history.replaceState(null, null, "main");
+      }
+    </script>
+</head>
+<body>
+    <div class="construction-bar construction-top"></div>
+    <div class="main-content">
+        <div class="container">
+            <h1>Ricardo Kraus</h1>
+            <img src="https://avatars.githubusercontent.com/u/109121634?v=2" alt="Ricardo Kraus">
+            <p>Bienvenido a mi página web, todavía está en construcción así que de mientras, visita mi página de linkedin <a href="https://www.linkedin.com/in/tu-perfil">aquí</a></p>
         </div>
-        <div class="construction-bar construction-bottom"></div>
-    </body>
+    </div>
+    <div class="construction-bar construction-bottom"></div>
+</body>
 </html>
