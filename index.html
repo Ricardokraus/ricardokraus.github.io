@@ -1,9 +1,13 @@
 <html>
-    <head>
+    <header>
         <title>Bienvenido a mi página</title>
         <style href="style.css"/>
-    <script>window.history.replaceState(null, null, "/rka/main");</script>
-    </head>    
+        <script>
+              // Cambia la URL visualmente apenas carga la página
+              // El primer parámetro es el estado, el segundo el título (ignorado), el tercero es la URL
+              window.history.replaceState(null, null, "/rka/main");
+        </script>
+    </header>    
     <body>
         <div class="construction-bar construction-top"></div>
         <div class="main-content">
