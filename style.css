@@ -26,8 +26,6 @@ body {
         background-position: 0 0;
     }
     to {
-        /* Movemos exactamente el ancho del background-size (85px) */
-        /* Si quieres que se mueva hacia el otro lado, usa -85px */
         background-position: 85px 0; 
     }
 }
@@ -43,10 +41,7 @@ body {
         #000 60px
     );
     opacity: 0.5;
-    /* Mantenemos un tamaño fijo */
-    background-size: 85px 85px; 
-    /* Bajamos el tiempo a 2s o 3s para que se aprecie la fluidez, 
-       15s es muy lento y a veces el ojo nota microsaltos */
+    background-size: 85px 85px;
     animation: moveStripes 7.5s linear infinite;
 }
 
@@ -81,61 +76,51 @@ p {
 }
 
 a {
-    color: rgb(12, 105, 105);
+    color: #ff3333;
     font-weight: bold;
-    text-decoration: none; /* Quitamos el subrayado por defecto */
-    position: relative;    /* Necesario para posicionar la línea animada */
-    display: inline-block; /* Ayuda a que la línea respete el ancho del texto */
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
     transition: color 0.2s ease-out, scale 0.2s ease-out;
 }
 
-/* Esta es la línea roja invisible esperando ser animada */
 a::after {
     content: '';
     position: absolute;
     width: 100%;
-    height: 3px;           /* Grosor de la línea (ajustable) */
-    bottom: -2px;          /* Distancia respecto al texto */
+    height: 3px;
+    bottom: -2px;
     left: 0;
-    background-color: #ff3333; /* El color rojo del vídeo (cámbialo si quieres) */
-    
-    /* La magia de la animación */
-    transform: scaleX(0);       /* Empieza con ancho 0 */
-    transform-origin: bottom left; /* La animación nace desde la izquierda */
+    background-color: #ff3333;
+    transform: scaleX(0);
+    transform-origin: center;
     transition: transform 0.3s ease-out;
 }
 
 a:hover {
-    /* Efecto de escala leve al texto que ya tenías */
-    scale: 1.02;
-    /* Opcional: Cambiar color del texto al pasar el mouse */
-    /* color: #333; */
+    font-size: 102%;
 }
 
 a:hover::after {
-    /* Al pasar el mouse, la línea crece al 100% */
     transform: scaleX(1);
 }
 
-/* Redondear el contenedor principal */
 .gt_switcher_wrapper {
     border-radius: 15px !important;
-    overflow: hidden !important; /* Crucial para que el contenido no tape las esquinas */
+    overflow: hidden !important;
     box-shadow: 0px 4px 12px rgba(0,0,0,0.2) !important;
     border: none !important;
     margin-top: 10px !important;
 }
 
-/* Redondear las banderas/opciones individuales */
 .gt_option {
-    border-radius: 0 !important; /* Es mejor que sean rectas dentro del contenedor redondeado */
+    border-radius: 0 !important;
 }
 
 .gt_option:hover {
     background-color: #f0f0f0 !important;
 }
 
-/* Ajuste para las imágenes de las banderas */
 .gt_switcher_wrapper img {
     border-radius: 4px !important; /* Un redondeado leve a las banderas queda más moderno */
 }
