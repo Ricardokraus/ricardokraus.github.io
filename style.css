@@ -97,10 +97,6 @@ h1 {
     transition: transform 0.3s ease-out;
 }
 
-.main-content a:hover {
-    font-size: 102%;
-}
-
 .main-content a:hover::after {
     transform: scaleX(1);
 }
