@@ -58,7 +58,7 @@ body {
 
 h1 {
     color: #333;
-    animation: fadeInScale 0.8s ease-out 0.5s backwards;
+    animation: fadeInScale 0.8s ease-out 0.5s;
     margin: 0 0 20px 0;
 }
 
@@ -76,12 +76,17 @@ h1 {
 }
 
 .main-content a {
-    color: #ffffff;
+    color: #ff0000;
     font-weight: bold;
     text-decoration: none;
     position: relative;
     display: inline-block;
     transition: color 0.2s ease-out, scale 0.2s ease-out;
+}
+
+.main-content a:hover {
+    color: #000000;
+    transform: scale(1.05);
 }
 
 .main-content a::after {
@@ -91,7 +96,7 @@ h1 {
     height: 3px;
     bottom: -2px;
     left: 0;
-    background-color: #ff3333;
+    background-color: #ff0000;
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease-out;
